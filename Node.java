@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * A node containing information about the 
  * organism used in searching a graph to recover a tree.
  * currently used only for a UPGMA approach, but
- * is extendable to other approaches. 
+ * is extendible to other approaches. 
  */
 public class Node {
 	String newick;
@@ -18,9 +18,9 @@ public class Node {
 		name=name.replaceAll(">", "");
 		//name=name.replaceAll("\\","");
 		//name=name.replaceAll("/","");
-		if(name.length()>30){
-			name=name.substring(0, 29);
-		}
+		//if(name.length()>30){
+			//name=name.substring(0, 29);
+		//}
 		name=name.replaceAll(" ", "_");
 		name=name.replaceAll("-", "_");
 		name.replaceAll(",", "_");
@@ -70,7 +70,6 @@ public class Node {
 	public String toString(){
 		return(String.valueOf(this.names));
 	}
-	
 	@Override
 	public boolean equals(Object o){
 		if(o==this){
